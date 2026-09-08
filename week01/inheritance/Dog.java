@@ -1,9 +1,10 @@
 package inheritance;
 
 public class Dog extends Animal {
+
     public Dog() {
         super();
-        anmialType = "Dog";
+        animalType = "Dog";
     }
 
     public static void main(String[] args) {
@@ -12,8 +13,11 @@ public class Dog extends Animal {
         dog.noise();
     }
 
+    /* */
     @Override 
     public void noise() {
         System.out.println("Bark bark");
     }
+        
+        
 }

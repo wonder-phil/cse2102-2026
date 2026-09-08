@@ -1,4 +1,4 @@
 interface Details {
-    public double getValue();
-    public void setValue(double d);
+    double getValue();
+    void setValue(double d);
 }

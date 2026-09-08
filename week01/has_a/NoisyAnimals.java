@@ -1,6 +1,6 @@
 package has_a;
 
-import inheritance.Dog;
+import inheritance.*;
 
 class NoisyAnimals {
 

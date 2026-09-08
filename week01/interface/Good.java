@@ -8,14 +8,13 @@ class Good implements Details {
         System.out.println("value = " + g.getValue());
     }
 
-
     Good() { val = 0; }
 
     @Override 
     public double getValue() {
         return val;
     }
-
+   
     @Override 
     public void setValue(double d) {
         val = d;
