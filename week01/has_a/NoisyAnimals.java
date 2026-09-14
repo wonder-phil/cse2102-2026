@@ -13,7 +13,6 @@ class NoisyAnimals {
 
         screecher = new Bird();
         screecher.noise();
-
     }
 }
 

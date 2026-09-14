@@ -9,7 +9,6 @@ class Animal {
         animalType = type;
     }
 
-
     Animal() {
         animalType = "none";
     }
