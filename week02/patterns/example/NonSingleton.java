@@ -3,8 +3,9 @@ package example;
 public class NonSingleton {
 	
 	public NonSingleton() {
+		value++;
 	}
 	
-	private int value = 0;
+	public static int value = 0;
 	
 }

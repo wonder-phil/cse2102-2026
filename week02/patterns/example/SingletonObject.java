@@ -8,7 +8,7 @@ public class SingletonObject {
 	
 	private static SingletonObject INSTANCE = new SingletonObject();
 	
-	private int value = 0;
+	public int value = 0;
 	
 	public static SingletonObject getInstance() {
 		return INSTANCE;
