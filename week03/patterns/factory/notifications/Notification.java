@@ -1,3 +1,3 @@
 public interface Notification {
-     void notifyUser();
+     public void notifyUser();
 }

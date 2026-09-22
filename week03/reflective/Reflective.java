@@ -3,7 +3,6 @@ import java.lang.reflect.*;
 
 public class Reflective {
 
-
     public static void main(String[] args) {
 
         SimpleClass simpleClass = new SimpleClass();

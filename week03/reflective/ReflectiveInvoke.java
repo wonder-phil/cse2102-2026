@@ -24,7 +24,7 @@ public class ReflectiveInvoke {
 
             System.out.println((int) result);
 
-        }  catch(NoSuchMethodException nsm) {
+        } catch(NoSuchMethodException nsm) {
             nsm.printStackTrace();
         } catch(Exception e) {
             e.printStackTrace();

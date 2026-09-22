@@ -1,6 +1,5 @@
 public class SimpleClass {
 
-
     private int value1, value2;
     public int number1, number2;
 

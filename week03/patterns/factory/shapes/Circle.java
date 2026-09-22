@@ -1,6 +1,11 @@
-public class Circle implements Shape {
+public class Circle implements Shape, Color {
 	
 	private static int count_circles = 0;
+
+	@Override 
+	public enum InnerColor {
+		RED, BLUE, GREEN
+	}
 	
 	private double radius;
 	
@@ -31,5 +36,10 @@ public class Circle implements Shape {
 	
 	public static int getCountCircles() {
 		return count_circles;
+	}
+
+	@Override 
+	public void setColor(InnerColor c) {
+		InnerColor = c;
 	}
 }
