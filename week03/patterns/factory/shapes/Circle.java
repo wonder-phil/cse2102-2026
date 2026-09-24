@@ -40,6 +40,6 @@ public class Circle implements Shape, Color {
 
 	@Override 
 	public void setColor(InnerColor c) {
-		InnerColor = c;
+		Circle.InnerColor = c;
 	}
 }
