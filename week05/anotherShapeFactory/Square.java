@@ -2,8 +2,6 @@ public class Square implements Shape {
 	
 	double area;
 	
-	public Square() { }
-	
 	public Square(double s) {
 		area = s * s;
 	}
@@ -16,10 +14,6 @@ public class Square implements Shape {
     @Override
 	public void draw() {
 		System.out.println("Draw square");
-	}
-	
-	public void setSide(double s) {
-		area = s * s;
 	}
 	
 }
