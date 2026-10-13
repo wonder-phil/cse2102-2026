@@ -1,3 +1,5 @@
+package p;
+
 public class CheesePizza implements Pizza {
     
     public CheesePizza() {
