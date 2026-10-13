@@ -1,1 +1,20 @@
+# Java/JVM class files
 *.class
+
+# Python virtual environments
+venv/
+.venv/
+env/
+.env/
+
+*/bin/*
+*/lib/lib*
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+
+# Python packaging
+*.egg-info/
+build/
+dist/
