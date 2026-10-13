@@ -1,5 +1,6 @@
 # myPizzaFactory
 
+> Move all test files into a test directory
 >
 > javac *.java <br />
 > java PizzaStore <br />
