@@ -7,6 +7,9 @@ venv/
 env/
 .env/
 
+*/bin/*
+*/lib/lib*
+
 # Python cache and compiled files
 __pycache__/
 *.py[cod]
