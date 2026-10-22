@@ -8,6 +8,7 @@ env/
 .env/
 
 */bin/*
+*/lib/*
 */lib/lib*
 
 # Python cache and compiled files
