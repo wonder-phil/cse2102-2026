@@ -24,13 +24,14 @@ public class RetryStormClient {
     }
 
     private static void sendRequestWithAggressiveRetries(int clientId) {
-        // Timeout set to 2 seconds (Server takes 4 seconds -> forces a timeout)
+        // Timeout set to 2 seconds (Server takes 2 seconds -> forces a timeout)
         HttpClient client = HttpClient.newBuilder()
                 .connectTimeout(Duration.ofSeconds(2))
                 .build();
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(SERVER_URL))
+                .timeout(Duration.ofSeconds(2))
                 .GET()
                 .build();
 

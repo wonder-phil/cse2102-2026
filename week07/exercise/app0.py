@@ -23,7 +23,7 @@ def do_work():
 
   try:
     # Simulate slow database query or downstream dependency
-    time.sleep(2)
+    time.sleep(5)
     return (
         jsonify({"status": "success", "message": "Work completed!"}),
         200,
