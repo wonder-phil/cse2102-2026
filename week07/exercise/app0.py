@@ -23,7 +23,7 @@ def do_work():
 
   try:
     # Simulate slow database query or downstream dependency
-    time.sleep(5)
+    time.sleep(2)
     return (
         jsonify({"status": "success", "message": "Work completed!"}),
         200,
@@ -39,4 +39,4 @@ def do_work():
 
 if __name__ == "__main__":
   # Ensure threaded=True so Flask handles multiple concurrent requests
-  app.run(host="0.0.0.0", port=5001, threaded=True)
+  app.run(host="0.0.0.0", port=5000, threaded=True)

@@ -8,8 +8,8 @@ import java.util.concurrent.Executors;
 
 public class RetryStormClient {
     private static final String SERVER_URL = "http://localhost:5000/do/work";
-    private static final int TOTAL_CLIENTS = 15;
-    private static final int MAX_RETRIES = 3;
+    private static final int TOTAL_CLIENTS = 2;
+    private static final int MAX_RETRIES = 10;
 
     public static void main(String[] args) {
         System.out.println("Launching " + TOTAL_CLIENTS + " clients to hammer the server...");
@@ -24,14 +24,14 @@ public class RetryStormClient {
     }
 
     private static void sendRequestWithAggressiveRetries(int clientId) {
-        // Timeout set to 2 seconds (Server takes 2 seconds -> forces a timeout)
+        
         HttpClient client = HttpClient.newBuilder()
                 .connectTimeout(Duration.ofSeconds(2))
                 .build();
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(SERVER_URL))
-                .timeout(Duration.ofSeconds(2))
+                .timeout(Duration.ofMillis(1000))
                 .GET()
                 .build();
 
