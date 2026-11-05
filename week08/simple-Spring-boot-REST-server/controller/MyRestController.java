@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RequestParam;  
 import org.springframework.web.bind.annotation.RequestBody;  
 
+import com.example.demo.model.EmailValidater;
+
+
 
 @RestController 
 public class MyRestController {
@@ -37,17 +40,17 @@ public class MyRestController {
     defaultValue = "Enjoy␣your␣day!\n") String data) {
     return "Echo: " + data;
   }
-  //curl.exe -X POST -H "Content-Type: application/json" http://localhost:8081/email-address-valid?email="alan@ias.edu"
-  //curl.exe -X POST -H "Content-Type: application/json" http://localhost:8081/email-address-valid?email="alan@iasedu"
+  //curl.exe -X POST -H "Content-Type: application/json" -d '{\"email\": \"alan@ias.edu\"}' http://localhost:8081/email-address-valid 
   @PostMapping(path="/email-address-valid")
   @ResponseStatus(HttpStatus.CREATED)
-  public String isEmailValid(@RequestParam(value = "email") String email) {
-    String data = "";
-    if (email.contains("@") && email.contains(".")) {
-      data = "Valid email address.";
+  public String isEmailValid(@RequestBody Map<String, Object> data) {
+    String email = (String) data.get("email");
+    EmailValidater emailValidater = new EmailValidater();
+    boolean result = emailValidater.checkEmail(email);
+    if (result) {
+      return "Email VALID check: " + email + " is " + data + "\n";
     } else {
-      data = "Invalid email address.";
-    }   
-    return "Email check: " + email + " is " + data + "\n";
+      return "Email INVALID check: " + email + " is " + data + "\n";
+    }
   }
 }
