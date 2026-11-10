@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>Question screen</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1 id="my-element">Quiz question</h1>
+    <form action="/get_question" method="post">  
+         <div>
+            <div th:object="${count}">
+                <p>Question: <span th:text="*{count}"></span></p>
+            </div>
+            <div th:object="${myString}">
+                <span th:text="*{getMyString()}"></span>
+            </div>
+        </div>
+        <input type="radio" id="trueOption" name="answer" value="true">
+        <label for="trueOption">True</label><br>
+        <input type="radio" id="falseOption" name="answer" value="false">
+        <label for="falseOption">False</label><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <a href="/get_question">Submit another message</a>
+</body>
+</html>
