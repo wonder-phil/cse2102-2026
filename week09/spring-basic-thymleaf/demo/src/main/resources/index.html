@@ -1,0 +1,15 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8" />
+  <title>Simple Thymeleaf</title>
+</head>
+<body>
+  <h1>Say hi</h1>
+  <form th:action="@{/hello}" method="post">
+    <label for="name">Your name:</label>
+    <input id="name" name="name" placeholder="Ada Lovelace" />
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
